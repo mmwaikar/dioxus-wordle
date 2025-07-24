@@ -1,0 +1,18 @@
+[package]
+name = "dioxus-wordle"
+version = "0.1.0"
+authors = ["Manoj Waikar <mmwaikar@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = { version = "0.6.3", features = [] }
+rand = "0.9.2"
+wordle-lib-rs = { git = "https://github.com/mmwaikar/wordle-lib-rs" }
+
+[features]
+default = ["web"]
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
